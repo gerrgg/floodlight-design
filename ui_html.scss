@@ -1,0 +1,122 @@
+$color-main: #00a3e4;
+$color-main-dark: #016e99;
+$color-secondary: #6a747d;
+$color-light: #fff;
+$color-dark: #000;
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: $color-main;
+}
+
+#panel {
+  max-width: 768px;
+  margin: 0 auto;
+
+  #header {
+    position: relative;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    background-color: $color-secondary;
+
+    #search {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      label {
+        color: #fff;
+        font-size: 0.85rem;
+        padding-right: 0.5rem;
+      }
+      input[type="text"],
+      input[type="submit"] {
+        background-color: $color-main-dark;
+        border: 1px solid $color-light;
+        color: $color-light;
+        margin: 0;
+        padding: 0.25rem;
+      }
+    }
+
+    #menu {
+      display: flex;
+      align-items: center;
+      padding-left: 0;
+      margin: 0.5rem 0 0 0;
+      list-style: none;
+
+      li {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+
+        a {
+          text-transform: uppercase;
+          color: $color-light;
+          text-decoration: none;
+        }
+
+        &.selected {
+          background-color: $color-main;
+
+          a {
+            color: $color-dark;
+          }
+        }
+      }
+    }
+  }
+
+  #content {
+    display: flex;
+    padding-top: 0.75rem;
+
+    #sidebar {
+      width: 33%;
+      border-right: 1px dashed $color-secondary;
+      padding-right: 0.5rem;
+
+      h2 {
+        font-size: 1rem;
+        margin: 0.5rem 0;
+      }
+
+      ul {
+        padding: 0.5rem;
+
+        &:first-child {
+          margin: 0 0 0.75rem 0;
+        }
+
+        margin: 0.5rem 0;
+
+        list-style: none;
+        background-color: $color-secondary;
+
+        li {
+          a {
+            color: $color-dark;
+          }
+        }
+
+        &:nth-child(2n) {
+          background-color: $color-dark;
+          color: $color-main;
+
+          a {
+            color: $color-main;
+          }
+        }
+      }
+    }
+
+    #article {
+      padding-left: 0.5rem;
+      width: 66%;
+
+      h1 {
+        margin: 0;
+      }
+    }
+  }
+}
